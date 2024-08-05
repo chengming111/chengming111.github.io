@@ -736,9 +736,11 @@
             labelElement = clickedOption.querySelector('.radio-label');
             if(labelElement.textContent == '10、其他假别') {
                 otherInput.style.display = 'block';
+                attachment_container.style.display = 'none';
                 dataInputValue = otherInput.textContent;
             } else if (labelElement.getAttribute('data-value') >=2 && labelElement.getAttribute('data-value') <= 7) {
                 attachment_container.style.display = 'block';
+                otherInput.style.display = 'none';
                 dataInputValue = labelElement.textContent;
             } else {
                 otherInput.style.display = 'none';
