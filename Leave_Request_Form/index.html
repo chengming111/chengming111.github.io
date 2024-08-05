@@ -24,6 +24,7 @@
 
         .form-content {
             padding-bottom: 60px;
+            padding-top: 60px;
         }
         
         .placeholder-line {
@@ -55,6 +56,19 @@
         }
         
         /* <!-- --------------------------------标题样式 ---------------------------- --> */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            transition: top 0.3s;
+            z-index: 1000; /* 确保头部在其他内容之上 */
+        }
         
         .head {
             width: 100%;
@@ -422,6 +436,7 @@
 <body>
 <div class="form-container">
     <div class="form-content">
+        <div class="header" id="header" style="display: none">员工请假表单</div>
         <div class="head">
             <h1>员工请假申请表</h1>
             <h2>员工请假时填写的申请表</h2>
