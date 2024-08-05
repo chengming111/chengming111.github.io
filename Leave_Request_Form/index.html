@@ -66,7 +66,7 @@
             text-align: center;
             padding: 15px;
             font-size: 18px;
-            transition: top 0.3s;
+            transition: top 0.8s;
             z-index: 1000; /* 确保头部在其他内容之上 */
         }
         
@@ -894,10 +894,10 @@
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
             // 向下滚动
-            header.style.top = '-60px';
+            header.style.top = '-120px';
         } else {
             // 向上滚动
-            header.style.top = '0';
+            header.style.top = '60';
         }
         lastScrollTop = scrollTop;
     });
