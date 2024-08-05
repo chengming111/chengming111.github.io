@@ -436,7 +436,7 @@
 <body>
 <div class="form-container">
     <div class="form-content">
-        <div class="header" id="header" style="display: none">员工请假表单</div>
+        <div class="header" id="header">员工请假表单</div>
         <div class="head">
             <h1>员工请假申请表</h1>
             <h2>员工请假时填写的申请表</h2>
@@ -886,11 +886,21 @@
     //}
     
     
-    // 时间范围的相关设置
-    
-
-
-
+    // 头部悬停 quick return
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+        
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // 向下滚动
+            header.style.top = '-60px';
+        } else {
+            // 向上滚动
+            header.style.top = '0';
+        }
+        lastScrollTop = scrollTop;
+    });
 
 </script>
 </body>
