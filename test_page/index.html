@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试组件页面</title>
+    <style>
+        .hello-world {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #333;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-world">
+        Hello World!
+    </div>
+    <input type="file"  id="fileInput">
+
+    <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">男</label>
+    </div>
+    <div>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">女</label>
+    </div>
+
+    <label for="hobbies">复选框：</label>
+    <div>
+        <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+        <label for="hobby1">阅读</label>
+    </div>
+    <div>
+        <input type="checkbox" id="hobby2" name="hobbies" value="traveling">
+        <label for="hobby2">旅行</label>
+    </div>
+    <div>
+        <input type="checkbox" id="hobby3" name="hobbies" value="gaming">
+        <label for="hobby3">游戏</label>
+    </div>
+          
+    <label for="country">选择框：</label>
+    <select id="country" name="country">
+        <option value="china">中国</option>
+        <option value="usa">美国</option>
+        <option value="uk">英国</option>
+        <option value="canada">加拿大</option>
+    </select>
+         
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        console.log( "change",);
+        fileInput.addEventListener('change', function (event) {
+            console.log( "change",);
+            const listItem = document.createElement('p');
+            listItem.textContent = `文件名: ${ event.detail.file.name}, 大小: ${event.detail.file.size} 字节, 类型: ${event.detail.file.type}`;
+            fileList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
