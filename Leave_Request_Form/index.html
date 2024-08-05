@@ -437,18 +437,18 @@
 
     <!-- ----------------------------------- 请假类别、理由、及相关附件 ---------------------------------- -->
 
-    <div class="form-group">
+<!--     <div class="form-group"> -->
         <!-- <label class="small grey">请选择您最喜欢的运动</label> -->
-        <div id="bottom-selected">
-            <label class="bold">请假类别</label>
+<!--         <div id="bottom-selected"> -->
+<!--             <label class="bold">请假类别</label> -->
             <!-- TODO: 自定义标签 下拉选择 -->
-            <custom-button></custom-button>
-        </div>
-    </div>
-    <div class="placeholder-line"></div>
+<!--             <custom-button></custom-button> -->
+<!--         </div> -->
+<!--     </div> -->
+<!--     <div class="placeholder-line"></div> -->
     <div class="form-group">
         <!-- <label class="small grey">请选择您最喜欢的运动</label> -->
-        <label class="bold">请假类别</label>
+        <label class="bold">请假类别 <span class="required">*</span></label>
         <div class="radio-group" id="radioGroup">
             <div class="radio-option">
                 <div class="radio-dot">
@@ -549,7 +549,7 @@
 
     <div class="form-group">
         <label class="bold">地址信息</label>
-        <label class="bold">现在住址</label>
+        <label class="bold">城市选择</label>
         <flutter-city_pickers id="current-address" name="current-address" placeholder="请输入"></flutter-city_pickers>
         <label class="bold">街道信息</label>
         <input type="text" id="current-address-detail" name="current-address" placeholder="请输入">
