@@ -880,6 +880,16 @@
         var phone = document.getElementById('phone');
         return phone.value;
     };
+
+
+
+    // ---------------------------------------获得input type=“file”的值------------------------------------
+    window.form.setFileInputValue = (value) => {
+        var file = document.getElementById('attachment');
+        file.setAttribute('data-inputValue', value);
+    };
+
+    
     
     //更新元素的 data-value 属性
     //function updateDataValue(inputElement) {
@@ -888,21 +898,6 @@
     //}
     
     
-    //-------------------------------------- 头部悬停 quick return---------------------------------------------------
-    // let lastScrollTop = 0;
-    // const header = document.getElementById('header');
-        
-    // window.addEventListener('scroll', function() {
-    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    //     if (scrollTop > lastScrollTop) {
-    //         // 向下滚动
-    //         header.style.top = '-30px';
-    //     } else {
-    //         // 向上滚动
-    //         header.style.top = '30px';
-    //     }
-    //     lastScrollTop = scrollTop;
-    // });
 
 </script>
 </body>
