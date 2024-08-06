@@ -62,11 +62,11 @@
             left: 0;
             width: 100%;
             background-color: #f5f5f5;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 18px;
-            transition: top 0.8s;
+/*             color: white; */
+/*             text-align: center; */
+/*             padding: 15px; */
+/*             font-size: 18px; */
+/*             transition: top 0.8s; */
             z-index: 1000; /* 确保头部在其他内容之上 */
         }
         
@@ -436,7 +436,7 @@
 <body>
 <div class="form-container">
     <div class="form-content">
-        <div class="header" id="header">员工请假表单</div>
+        <div class="header" id="header"></div>
         <div class="head">
             <h1>员工请假申请表</h1>
             <h2>员工请假时填写的申请表</h2>
@@ -886,21 +886,21 @@
     //}
     
     
-    // 头部悬停 quick return
-    let lastScrollTop = 0;
-    const header = document.getElementById('header');
+    //-------------------------------------- 头部悬停 quick return---------------------------------------------------
+    // let lastScrollTop = 0;
+    // const header = document.getElementById('header');
         
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // 向下滚动
-            header.style.top = '-30px';
-        } else {
-            // 向上滚动
-            header.style.top = '30px';
-        }
-        lastScrollTop = scrollTop;
-    });
+    // window.addEventListener('scroll', function() {
+    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     if (scrollTop > lastScrollTop) {
+    //         // 向下滚动
+    //         header.style.top = '-30px';
+    //     } else {
+    //         // 向上滚动
+    //         header.style.top = '30px';
+    //     }
+    //     lastScrollTop = scrollTop;
+    // });
 
 </script>
 </body>
