@@ -830,7 +830,7 @@
         const jsonString = JSON.stringify(Object.fromEntries(dataValueMap), null, 2);
     
         //console.log(jsonString);
-        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyzzzxx");
+        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyzzzxxaa");
         // 将数据传给dart
         await window.form.submitMap(jsonString);
     });
@@ -867,7 +867,7 @@
     fileInput.addEventListener('change', (event) => {
         console.log("=============================================监听文件内容成功===");
         console.log("监听到的文件内容是===============================", event.detail);
-        const fileString = JSON.stringify(event.detail.files[0]);
+        const fileString = JSON.stringify(event.detail.files[0], null, 2);
         fileInput.setAttribute('data-inputValue', fileString);
     });
 
@@ -877,7 +877,7 @@
     cityInput.addEventListener('citychange', (event) => {
         console.log("=============================================监听城市内容成功===");
         console.log("监听到的城市内容是===============================", event.detail);
-        const cityString = JSON.stringify(event.detail);
+        const cityString = JSON.stringify(event.detail, null, 2);
         cityInput.setAttribute('data-inputValue', cityString);
     });
     
