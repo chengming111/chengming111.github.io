@@ -22,7 +22,7 @@
             background-color: #fff;
         }
 
-        .form-content {
+        #form-content {
             padding-bottom: 60px;
         }
         
@@ -435,7 +435,7 @@
 </head>
 <body>
 <div class="form-container">
-    <div class="form-content">
+    <div id="form-content">
         <div class="head">
             <h1>员工请假申请表</h1>
             <h2>员工请假时填写的申请表</h2>
@@ -446,20 +446,20 @@
     
         <div class="form-group">
             <label class="bold">申请人姓名: <span class="required">*</span></label>
-            <input type="text" id="name" name="name" placeholder="请输入" required="true" readonly="true">
+            <input type="text" id="name" name="name" placeholder="请输入" required="true" readonly="true" data-inputValue="">
         </div>
         <div class="form-group">
             <label class="bold">员工编号: <span class="required">*</span></label>
-            <input type="text" id="employeeID" name="employeeID" placeholder="请输入" required="true" readonly="true">
+            <input type="text" id="employeeID" name="employeeID" placeholder="请输入" required="true" readonly="true" data-inputValue="">
         </div>
         <div class="form-group">
             <label class="bold">部门/职位: <span class="required">*</span></label>
-            <input type="text" id="department-occupation" name="department-occupation" placeholder="请输入" required="true" readonly="true">
+            <input type="text" id="department-occupation" name="department-occupation" placeholder="请输入" required="true" readonly="true" data-inputValue="">
             <p class="errorMessage"></p>
         </div>
         <div class="form-group">
             <label class="bold">联系电话: <span class="required">*</span></label>
-            <input type="text" id="phone-number" name="phone-number" placeholder="请输入" required="true">
+            <input type="text" id="phone-number" name="phone-number" placeholder="请输入" required="true" data-inputValue="">
             <p id="phoneErrorMessage" class="errorMessage"></p>
         </div>
         <div class="placeholder-line"></div>
@@ -478,7 +478,7 @@
         <div class="form-group">
             <!-- <label class="small grey">请选择您最喜欢的运动</label> -->
             <label class="bold">请假类别 <span class="required">*</span></label>
-            <div class="radio-group" id="radioGroup">
+            <div class="radio-group" id="radioGroup" data-inputValue="">
                 <div class="radio-option">
                     <div class="radio-dot">
                         <div class="radio-dot-inner"></div>
@@ -549,12 +549,12 @@
         </div>
         <div class="form-group" id="attachment-container">
             <label class="bold">相关附件: <span class="required">*</span></label>
-            <input type="file" id="attachment" name="attachment" placeholder="请输入" required="true">
+            <input type="file" id="attachment" name="attachment" placeholder="请输入" required="true" data-inputValue="">
     
         </div>
         <div class="form-group">
             <label class="bold">请假理由: <span class="required">*</span></label>
-            <textarea id="reason" name="reason" placeholder="请输入" required="true"></textarea>
+            <textarea id="reason" name="reason" placeholder="请输入" required="true" data-inputValue=""></textarea>
         </div>
         <div class="placeholder-line"></div>
 
@@ -562,7 +562,7 @@
     
         <div class="form-group">
            <label class="bold">请假时间: <span class="required">*</span></label>
-            <select-time  id="start-time" name="reason" placeholder="请输入" required="true"></select-time>
+            <select-time  id="start-time" name="reason" placeholder="请输入" required="true" data-inputValue=""></select-time>
         </div>
     <!--    <div class="form-group">-->
     <!--        <label class="bold">结束日期: <span class="required">*</span></label>-->
@@ -579,9 +579,9 @@
         <div class="form-group">
             <label class="bold">地址信息</label>
             <label class="bold">城市选择</label>
-            <flutter-city_pickers id="current-address" name="current-address" placeholder="请输入"></flutter-city_pickers>
+            <flutter-city_pickers id="current-address" name="current-address" placeholder="请输入" data-inputValue=""></flutter-city_pickers>
             <label class="bold">街道信息</label>
-            <input type="text" id="current-address-detail" name="current-address" placeholder="请输入">
+            <input type="text" id="current-address-detail" name="current-address" placeholder="请输入" data-inputValue="">
         </div>
         <div class="placeholder-line"></div>
 
@@ -589,17 +589,17 @@
     
         <div class="form-group">
             <label class="bold">代理事项: <span class="required">*</span></label>
-            <input type="text" id="agent-event" name="agent-event" placeholder="请输入" required="true">
+            <textarea type="text" id="agent-event" name="agent-event" placeholder="请输入" required="true" data-inputValue=""></textarea>
             <p class="errorMessage"></p>
         </div>
         <div class="form-group">
             <label class="bold">代理人1: <span class="required">*</span></label>
-            <people-pick type="text" id="agent-person1" name="agent-person" placeholder="请选择" required="true"></people-pick>
+            <people-pick type="text" id="agent-person1" name="agent-person" placeholder="请选择" required="true" data-inputValue=""></people-pick>
             <p class="errorMessage"></p>
         </div>
         <div class="form-group">
             <label class="bold">代理人2: <span class="required">*</span></label>
-            <people-pick type="text" id="agent-person2" name="agent-person" placeholder="请选择" required="true"></people-pick>
+            <people-pick type="text" id="agent-person2" name="agent-person" placeholder="请选择" required="true" data-inputValue=""></people-pick>
             <p class="errorMessage"></p>
         </div>
          <div class="placeholder-line"></div>
@@ -608,7 +608,7 @@
     
         <div class="form-group">
             <label class="bold">备注: </label>
-            <textarea id="remark" name="remark" placeholder="请输入"></textarea>
+            <textarea id="remark" name="remark" placeholder="请输入" data-inputValue=""></textarea>
         </div>
         <div class="placeholder-line"></div>
 
@@ -639,11 +639,11 @@
 
             <div class="form-group">
                 <label class="bold">部门经理意见: </label>
-                <flutter-sign></flutter-sign>
+                <flutter-sign data-inputValue=""></flutter-sign>
             </div>
             <div class="form-group">
                 <label class="bold">总经理意见: </label>
-                <flutter-sign></flutter-sign>
+                <flutter-sign data-inputValue=""></flutter-sign>
             </div>
             <div class="placeholder-line"></div>
 
@@ -658,14 +658,14 @@
             <div class="form-group">
                 <label>通过聊天发送给审批人</label>
                 <!-- TODO: 更改为自定义标签 -->
-                <switch-button id="send-chat" class="switch"></switch-button>
+                <switch-button id="send-chat" class="switch" data-inputValue=""></switch-button>
             </div>
             <div class="placeholder-line"></div>
     
             <div class="form-group">
                 <label>通过后同步到我的日历</label>
                 <!-- TODO: 更改为自定义标签 -->
-                <switch-button id="syncCalendar" class="switch"></switch-button>
+                <switch-button id="syncCalendar" class="switch" data-inputValue=""></switch-button>
             </div>
             <div class="placeholder-line"></div>
 
@@ -718,6 +718,12 @@
     employeeID.value = dataObject.employeeID;
     department_occupation.value = dataObject.department + ' - ' + dataObject.occupation;
     phoneNumber.value = formatPhoneNumber(dataObject['phone-number']);
+
+    //将数据存储在data-inputValue中
+    name.setAttribute('data-inputValue', dataObject.name);
+    employeeID.setAttribute('data-inputValue', dataObject.employeeID);
+    department_occupation.setAttribute('data-inputValue', dataObject.department + ' - ' + dataObject.occupation);
+    phoneNumber.setAttribute('data-inputValue', dataObject['phone-number']);
     
     
     //格式化电话号码
@@ -745,8 +751,10 @@
     // 实时格式化电话号码
     document.getElementById('phone-number').addEventListener('input', function (e) {
         e.target.value = formatPhoneNumber(e.target.value);
+        e.target.setAttribute('data-inputValue', e.target.value);
     });
     
+    // --------------------------------------- 获得单选的data-inputValue值 ------------------------------------
     
     // 获取单选组和所有选项
     const radioGroup = document.getElementById('radioGroup');
@@ -802,7 +810,7 @@
         return dataValueMap;
     }
     
-    
+    // ----------------------------------------------- 提交点击触发事件 ---------------------------------------------
     
     // 提交按钮
     const submit = document.getElementById('submit');
@@ -812,88 +820,64 @@
         //TODO: 如果提交成功, 弹出框确认提交吗
        const approval_part = document.getElementById('approval-part');
        approval_part.style.display = 'block';
+
     
-    
-        // 将整个HTML文件转换成JSON对象
-    //    const jsonObject = traverseDOM(document.documentElement);
+        // 将整个HTML文件中用户填写的数据 转换成JSON对象
         const dataValueMap = traverseDOM(document.documentElement);
     
         // 将JSON对象转换为字符串
-    //    const jsonString = JSON.stringify(jsonObject, null, 2);
+        // const jsonString = JSON.stringify(jsonObject, null, 2);
         const jsonString = JSON.stringify(Object.fromEntries(dataValueMap), null, 2);
     
-        console.log(jsonString);
+        //console.log(jsonString);
+        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyzzz");
         // 将数据传给dart
         await window.form.submitMap(jsonString);
     });
     
     
-    const phone = document.getElementById('phone-number');
-    const reason = document.getElementById('reason');
-    const permanent_address = document.getElementById('permanent-address');
-    const current_address = document.getElementById('current-address');
-    const remark = document.getElementById('remark');
-    
-    function handleInputChange() {
-        phone.setAttribute('data-inputValue', phone.value);
-        reason.setAttribute('data-inputValue', reason.value);
-        permanent_address.setAttribute('data-inputValue', permanent_address.value);
-        current_address.setAttribute('data-inputValue', current_address.value);
-        remark.setAttribute('data-inputValue', remark.value);
-    
-        window.form.onPhoneInputChanged(phone.value);
-    }
+    // ---------------------------------------获得input 和 textarea 的data-inputValue值------------------------------------
+
     // 用户输入一改变就调用方法
     window.onload = function() {
-        phone.addEventListener('input', handleInputChange);
-        reason.addEventListener('input', handleInputChange);
-        permanent_address.addEventListener('input', handleInputChange);
-        current_address.addEventListener('input', handleInputChange);
-        remark.addEventListener('input', handleInputChange);
+        const form = document.getElementById('form-content');
+
+        // 为每一个单行输入框添加事件监听器
+        form.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', (event) => {
+                // 获取当前输入框
+                const target = event.target;
+                target.setAttribute('data-inputValue', target.value);
+            });
+        });
+        // 为每一个多行输入框添加事件监听器
+        form.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', (event) => {
+                // 获取当前输入框
+                const target = event.target;
+                target.setAttribute('data-inputValue', target.value);
+            });
+        });
     }
-    
-    
-    
-    //验证是否需要展示 用户输入为空的 错误提示
-    window.form.isEmptyValue = (phoneNumber) => {
-        var phone = document.getElementById('phone-number');
-        const isRequired = phone.getAttribute('required');
-        if (isRequired && phoneNumber.trim() === "") {
-            return true;
-        } else {
-            return false;
-        }
-    };
-    
-    const errorMessage = document.getElementById('phoneErrorMessage');
-    //为元素设置错误提示信息
-    window.form.setErrorMessageValue = (message) => {
-    //    var errorMessage = document.getElementById('errorMessage');
-        errorMessage.textContent = message;
-    };
-    
-    //为dart提供 ‘联系方式’ 中用户输入的数据
-    window.form.getPhoneInputValue = (input) => {
-        var phone = document.getElementById('phone');
-        return phone.value;
-    };
 
 
+    // ---------------------------------------获得input type=“file” 的data-inputValue值------------------------------------
 
-    // ---------------------------------------获得input type=“file”的值------------------------------------
-    window.form.setFileInputValue = (value) => {
-        var file = document.getElementById('attachment');
-        file.setAttribute('data-inputValue', value);
-    };
+    const fileInput = document.getElementById('attachment');
+    fileInput.addEventListener('change', (event) => {
+        console.log("=============================================监听文件内容成功===");
+        console.log("监听到的文件内容是===============================", event.detail);
+        fileInput.setAttribute('data-inputValue', event.detail.files);
+    });
 
-    
-    
-    //更新元素的 data-value 属性
-    //function updateDataValue(inputElement) {
-    //    var inputValue = inputElement.value;
-    //    inputElement.setAttribute('data-inputValue', inputValue);
-    //}
-    
+    // ---------------------------------------获得城市选择 的data-inputValue值------------------------------------
+
+    const cityInput = document.getElementById('current-address');
+    cityInput.addEventListener('citychange', (event) => {
+        console.log("=============================================监听城市内容成功===");
+        console.log("监听到的城市内容是===============================", event.detail);
+        cityInput.setAttribute('data-inputValue', event.detail);
+    });
     
 
 </script>
