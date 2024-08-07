@@ -867,7 +867,8 @@
     fileInput.addEventListener('change', (event) => {
         console.log("=============================================监听文件内容成功===");
         console.log("监听到的文件内容是===============================", event.detail);
-        fileInput.setAttribute('data-inputValue', event.detail.files);
+        const fileString = JSON.stringify(event.detail.files[0]);
+        fileInput.setAttribute('data-inputValue', fileString);
     });
 
     // ---------------------------------------获得城市选择 的data-inputValue值------------------------------------
