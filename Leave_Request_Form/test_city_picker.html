@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试城市选择元素替换</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hello-world {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #333;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+            margin: 50px auto;
+        }
+        
+        .city-selector {
+            margin: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        select {
+            width: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-world">
+        Hello World!
+    </div>
+    <div class="city-selector">
+        <label for="countrySelect">Choose a country:</label>
+        <select id="countrySelect">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+        </select>
+
+        <label for="citySelect">Choose a city:</label>
+        <select id="citySelect">
+            <!-- Cities will be populated here -->
+        </select>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        console.log( "change",);
+        fileInput.addEventListener('change', function (event) {
+            console.log( "change",);
+            const listItem = document.createElement('p');
+            listItem.textContent = `文件名: ${ event.detail.file.name}, 大小: ${event.detail.file.size} 字节, 类型: ${event.detail.file.type}`;
+            fileList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
